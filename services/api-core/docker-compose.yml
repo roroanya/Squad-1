@@ -1,0 +1,23 @@
+# Database lokal NusantaraGo: PostgreSQL 16 + PostGIS 3.4
+# Hanya untuk development. Jangan pakai password ini di server sungguhan.
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: nusantarago-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nusantara
+      POSTGRES_PASSWORD: nusantara_dev
+      POSTGRES_DB: nusantarago
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nusantara -d nusantarago"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  db-data:
