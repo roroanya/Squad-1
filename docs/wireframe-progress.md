@@ -13,13 +13,14 @@ Pembuatan wireframe UI menggunakan Figma.
 - Membuat halaman utama Direktori Wisata.
 - Membuat navigasi dan search bar.
 - Membuat filter berdasarkan provinsi.
-- Membuat dropdown enam kategori wisata:
+- Membuat dropdown tujuh kategori wisata:
   1. Alam
   2. Budaya
   3. Sejarah
   4. Kuliner
   5. Buatan
   6. Desa Wisata
+  7. Religi
 - Membuat rancangan filter lanjutan.
 - Membuat kartu destinasi wisata.
 - Membuat rancangan peta lokasi wisata.
